@@ -1,0 +1,203 @@
+/*import atkinson hyperledgible*/
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*set html rules*/
+html {
+    /*set font family to atkinson hyperledgible*/
+    font-family: "Atkinson Hyperlegible", sans-serif;
+}
+/*set body rules*/
+body {
+    /*set margin to 0*/
+    margin: 0;
+}
+
+/*set rules for ul elements with nav-list class*/
+ul.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #ece7e2;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/*set rules for li and a of ul elements that have nav-list class*/
+ul.nav-list li a {
+    display: block;
+    color: #1f1f29;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+/*set rules for li and a of ul elements that have nav-list class and a has current class*/
+ul.nav-list li a.current {
+    background-color: #4a7766;
+    color: #ece7e2;
+}
+
+/*set rules for li and a of ul elements that have nav-list class while a:hover and a doesnt have current class*/
+ul.nav-list li a:hover:not(.current) {
+    background-color: #555;
+    color: #ece7e2;
+}
+
+/*set rules for page-content class*/
+.page-content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    justify-content: center;
+    display: block;
+}
+
+/*set rules for footer with the class page-content*/
+footer.page-content {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/*set rules for footer*/
+footer {
+    background-color: #4a7766;
+    color: #ece7e2;
+    text-decoration: none;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*set rules for a elements in footer*/
+footer a{
+    color: #ece7e2;
+}
+
+/*set rules for p inside profile-text class*/
+.profile-text p {
+    margin: 0 0 1.5rem;
+}
+
+/*set rules for profile class*/
+.profile {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/*set rules for column class*/
+.column {
+    flex: 1;
+}
+
+/*set rules for profile-image class*/
+.profile-image {
+    border-radius: 50%;
+    border: 0.25rem solid #4a7766;
+    width: 30%;
+    align-self: center;
+}
+
+/*set rules for portfolio-image class*/
+.portfolio-image {
+    width: calc(20% - 0.5rem);
+    padding: 0.5rem;
+}
+
+/*set rules for img element inside portfolio-image class*/
+.portfolio-image img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+/*set rules for portfolio-gallery class*/
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding-left: 1rem;
+}
+
+/*set rules for screens under 900px width*/
+@media screen and (max-width: 900px) {
+    /*set rules for ul elements with nav-list class*/
+    ul.nav-list {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    /*set rules for li and a of ul elements that have nav-list class*/
+    ul.nav-list li a {
+        float: left;
+        padding: 15px;
+    }
+    
+    /*set rules for page-content class*/
+    .page-content {
+        margin-left: 0;
+    }
+
+    /*set rules for profile class*/
+    .profile {
+        margin-top: 2rem;
+        display: block;
+        text-align: center;
+    }
+
+    /*set rules for profile-image class*/
+    .profile-image {
+        display: block;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*set rules for section class*/
+    .section {
+        padding-top: 0.5rem;
+        padding-bottom: 4rem;
+    }
+    
+    /*set rules for portfolio-gallery class*/
+    .portfolio-gallery {
+        float: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 0.5rem;
+        padding-left: 1rem;
+    }
+    
+    /*set rules for portfolio-image class*/
+    .portfolio-image {
+        width: calc(33% - 0.5rem);
+        padding: 0.5rem;
+    }
+
+    /*set rules for img elements inside portfolio-image class*/
+    .portfolio-image img {
+        height: 150px;
+        width: 150px;
+    }
+
+}
+
+/*set rules for screens under 400px width*/
+@media screen and (max-width: 400px) {
+    /*set rules for li and a of ul elements that have nav-list class*/
+    ul.nav-list li a {
+        text-align: center;
+        float: none;
+    }
+    
+    /*set rules for img element inside portfolio-image class*/
+    .portfolio-image img {
+        height: 75px;
+        width: 75px;
+        object-fit: cover;
+    }
+}
